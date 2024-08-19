@@ -1,135 +1,31 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, StyleSheet, Alert, TouchableOpacity } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import React from 'react';
+import { Text, View, ImageBackground } from 'react-native';
+import ButtonComponent from '../components/ButtonComponent';
+import { styles } from '../Theme/appTheme';
+import { CommonActions } from '@react-navigation/native';
 
-export default function InicioScreen({ navigation }: any) {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [showPassword, setShowPassword] = useState(false);
-
-  const handleLogin = () => {
-    // Aquí  implemente la lógica de inicio de sesión
-    Alert.alert('Inicio de Sesión', `Email: ${email}\nContraseña: ${password}`);
-  };
-
+export const InicioScreen = ({ navigation }: any) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.welcomeTitle}>Bienvenido</Text>
-      <Text style={styles.appTitle}>GalaxyMusic</Text>
-      <Text style={styles.subtitle}>Ingresa tu Usuario</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="Email"
-        value={email}
-        onChangeText={setEmail}
-        keyboardType="email-address"
-      />
-      <View style={styles.passwordContainer}>
-        <TextInput
-          style={styles.passwordInput}
-          placeholder="Contraseña"
-          value={password}
-          onChangeText={setPassword}
-          secureTextEntry={!showPassword}
-        />
-        <TouchableOpacity onPress={() => setShowPassword(!showPassword)} style={styles.eyeIcon}>
-          <Icon name={showPassword ? 'eye' : 'eye-slash'} size={20} color="#000" />
-        </TouchableOpacity>
-      </View>
-      <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
-          <Text style={styles.buttonText}>Iniciar Sesión</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.registerButton} onPress={() => navigation.navigate('Registro Usuario')}>
-          <Text style={styles.buttonText}>Ir a Registro</Text>
-        </TouchableOpacity>
-      </View>
-    </View>
-  );
-}
+    <ImageBackground
+      source={{ uri: 'https://media.revistagq.com/photos/64217f902885a34c380b022a/4:3/w_1440,h_1080,c_limit/Best-indie-albums-hp-b.jpg' }} 
+      style={styles.backgroundImage} 
+    >
+      <View style={styles.overlay} />
+      
+      <View style={styles.container}>
+        <View style={styles.headerContainer}>
+          <Text style={styles.text}>Bienvenido GalaxyMusic</Text>
+        </View>
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    padding: 16,
-    backgroundColor: '#1c8cb2', 
-  },
-  welcomeTitle: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    color: '#000',
-    marginBottom: 10,
-    marginTop: 10,
-    alignSelf: 'center',
-  },
-  appTitle: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#000',
-    marginBottom: 20,
-    alignSelf: 'center',
-  },
-  subtitle: {
-    fontSize: 16,
-    color: '#000',
-    marginBottom: 20,
-    alignSelf: 'flex-start',
-  },
-  input: {
-    height: 50,
-    borderColor: '#ccc',
-    borderWidth: 1,
-    borderRadius: 8,
-    marginBottom: 16,
-    paddingHorizontal: 16,
-    backgroundColor: '#ffffff', 
-  },
-  passwordContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    position: 'relative',
-    marginBottom: 16,
-  },
-  passwordInput: {
-    flex: 1,
-    height: 50,
-    borderColor: '#ccc',
-    borderWidth: 1,
-    borderRadius: 8,
-    paddingHorizontal: 16,
-    backgroundColor: '#ffffff',
-  },
-  eyeIcon: {
-    position: 'absolute',
-    right: 16,
-    top: 12,
-  },
-  buttonContainer: {
-    marginTop: 30,
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  loginButton: {
-    backgroundColor: '#28a745',
-    borderRadius: 8,
-    paddingVertical: 14,
-    paddingHorizontal: 32,
-    marginBottom: 16,
-    width: '80%',
-    alignItems: 'center',
-  },
-  registerButton: {
-    backgroundColor: '#007bff',
-    borderRadius: 8,
-    paddingVertical: 14,
-    paddingHorizontal: 32,
-    width: '80%',
-    alignItems: 'center',
-  },
-  buttonText: {
-    color: '#ffffff',
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
-});
+        <View style={styles.footerContainer}>
+          <ButtonComponent
+            texButton="Iniciar"
+            onPress={() => navigation.dispatch(CommonActions.navigate({ name: 'Login' }))}
+          />
+        </View>
+      </View>
+    </ImageBackground>
+  );
+};
+
+export default InicioScreen;

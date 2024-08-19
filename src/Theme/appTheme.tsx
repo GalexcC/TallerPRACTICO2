@@ -1,0 +1,271 @@
+import { StyleSheet } from 'react-native';
+import { INPUT_COLOR, PRIMARY_COLOR, SECUNDARY_COLOR } from '../commons/constants';
+
+export const styles = StyleSheet.create({
+  globalTitle: {
+    color: SECUNDARY_COLOR,
+    fontSize: 27,
+    paddingHorizontal: 30,
+    paddingVertical: 15,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    backgroundColor: PRIMARY_COLOR,
+    borderBottomLeftRadius: 30,
+    borderBottomRightRadius: 30,
+  },
+  contentBody: {
+    backgroundColor: '#f9f9f9',
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+    paddingHorizontal: 40,
+    paddingTop: 20,
+  },
+  titleHeaderBody: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: PRIMARY_COLOR,
+    textAlign: 'center',
+    marginBottom: 10,
+  },
+  textBody: {
+    fontSize: 16,
+    color: '#333',
+    textAlign: 'center',
+    marginBottom: 20,
+  },
+  inputText: {
+    backgroundColor: INPUT_COLOR,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 10,
+    borderColor: PRIMARY_COLOR,
+    borderWidth: 1,
+    marginBottom: 15,
+  },
+  contentInput: {
+    marginTop: 30,
+    gap: 10,
+  },
+  iconPassword: {
+    position: 'absolute',
+    right: 20,
+    zIndex: 1,
+    marginTop: 10,
+  },
+  textRedirection: {
+    marginTop: 30,
+    fontSize: 16,
+    color: PRIMARY_COLOR,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  errorText: {
+    color: 'red',
+    fontSize: 14,
+    marginVertical: 10,
+    textAlign: 'center',
+  },
+  contentCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 10,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    borderRadius: 10,
+    marginBottom: 15,
+    backgroundColor: '#95e3fd',
+  },
+  titleCard: {
+    fontWeight: 'bold',
+    color: 'black',
+    fontSize: 16,
+    marginBottom: 5,
+  },
+  descriptionCard: {
+    fontSize: 14,
+    color: '#666',
+    marginBottom: 5,
+  },
+  priceCard: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: 'green',
+  },
+  imageCard: {
+    width: 80,
+    height: 80,
+    borderRadius: 10,
+    marginRight: 15,
+  },
+  iconCard: {
+    flex: 1,
+    alignItems: 'flex-end',
+  },
+  contentPrincipal: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0,0,0,0.5)',
+  },
+
+  iconButton: {
+    alignItems: 'center',
+    justifyContent: 'center',
+},
+
+
+  contentModal: {
+    padding: 25,
+    backgroundColor: SECUNDARY_COLOR,
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  headModal: {
+    flexDirection: 'row',
+    borderBottomColor: '#ccc',
+    borderBottomWidth: 2,
+    padding: 10,
+  },
+  titleModal: {
+    fontSize: 18,
+    color: '#000',
+    fontWeight: 'bold',
+  },
+  imageModal: {
+    width: 200,
+    height: 200,
+  },
+  contentQuantity: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttonQuantity: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    backgroundColor: PRIMARY_COLOR,
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: 15,
+  },
+  textButtonQuantity: {
+    color: SECUNDARY_COLOR,
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  textQuantity: {
+    fontSize: 20,
+    color: '#000',
+    textAlign: 'center',
+  },
+  buttonAddCar: {
+    marginTop: 15,
+    backgroundColor: PRIMARY_COLOR,
+    borderRadius: 5,
+    paddingVertical: 10,
+    alignItems: 'center',
+  },
+  textButtonAddCar: {
+    color: SECUNDARY_COLOR,
+    fontWeight: 'bold',
+  },
+  messageStock: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#a92424',
+    textAlign: 'center',
+  },
+  contentHeaderHome: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+  },
+  iconCardHome: {
+    flex: 1,
+    alignItems: 'flex-end',
+    paddingHorizontal: 10,
+  },
+  textIconCard: {
+    backgroundColor: SECUNDARY_COLOR,
+    borderRadius: 20,
+    paddingHorizontal: 5,
+    fontSize: 13,
+    fontWeight: 'bold',
+  },
+  headerTable: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  headerInformation: {
+    flexDirection: 'row',
+  },
+  textInformation: {
+    fontWeight: 'bold',
+    color: '#000',
+  },
+  textTotalPay: {
+    marginTop: 7,
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  background: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  container: {
+    flex: 1,
+    justifyContent: 'space-between', 
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: 20,
+    color: '#fff',
+  },
+  backgroundImage: {
+    flex: 1,
+    resizeMode: 'cover',
+    justifyContent: 'center',
+  },
+  overlay: {
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  headerContainer: {
+    flex: 1,
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    marginTop: 50,
+  },
+  footerContainer: {
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    marginBottom: 40,
+    width: '100%',
+  },
+  button: {
+    backgroundColor: PRIMARY_COLOR,
+    paddingVertical: 15,
+    paddingHorizontal: 50,
+    borderRadius: 25,
+  },
+  buttonText: {
+    color: SECUNDARY_COLOR,
+    fontSize: 16,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+});
